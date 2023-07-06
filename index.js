@@ -438,6 +438,7 @@
 ////todo Chú ý điều kiện nếu không vòng lặp sẽ vô hạn (i>0; ; true)
 //     console.log(i)
 // }
+
 //*----------------------------------------------------
 ////todo Ứng dụng vòng lặp lấy phần tử từ mảng Array
 // var myArray = [
@@ -469,6 +470,7 @@
 // for (var i = 0; i < 3; i++) {
 //     console.log('Bạn đã chọn: ' + juice[i].name + ' và có giá ' + juice[i].price);
 // }
+
 //*----------------------------------------------------
 // var traiCay = [
 //     { loai: 'Táo', gia: '35000 Vnd / 1kg' },
@@ -520,7 +522,8 @@
 // do {
 //     i++;    //todo  ----> Nhớ đặt điều kiện nếu không sẽ treo máy
 //     console.log(i)
-// } while (i < 10);
+// } while (i < 10);\
+
 //*----------------------------------------------------
 // var i = 0
 // var isSuccess = false;
@@ -546,32 +549,105 @@
 // }
 
 //*----------------------------------------------------
-// var hocSinh = [
-//     ["Huy", "Nam"],
-//     ["Anh", "Nu"],
-//     ["Thao", "Nam"],
-//     ["Minh", "Nam"],
+// var myArray = [
+//     ["John", "Doe"],
+//     ["Jane", "Smith"],
+//     ["Bob", "Davidson"],
 // ]
-// for (let i = 0; i < hocSinh.length; i++) {
-//     for (let j = 0; j < hocSinh[i].length; j++) {
-//         console.log('Tên học sinh: ' + hocSinh[i][j]);
+// for (let i = 0; i < myArray.length; i++) {
+//     for (let j = 0; j < myArray[i].length; j++) {
+//         console.log(myArray[i][j])
 //     }
 // }
 
+//*----------------------------------------------------
+//// ?Ví dụ thêm: tạo vòng lặp từ 100 giảm xuống 0 và cách nhau 5 giá trị
+// for (let i = 100; i > 0; i -= 5) {
+//     console.log(i)
+// }
+
+//// ?Ví dụ thêm: tạo vòng lặp từ 0 tăng lên 100 và cách nhau 5 giá trị
+// for (let j = 0; j <= 100; j += 5) {
+//     console.log('tăng từ 0 lên 100:' + j)
+// }
 
 
+//! Làm việc với mảng Array phần 2:
+//  *  Array  forEach 
+var courses = [
+    { name: "HTML/CSS", teacher: "Mr John Doe", gia: 0 },
+    { name: "JavaScript", teacher: "Ms Jane Smith", gia: 0 },
+    { name: "Python Programming", teacher: "Dr Bob Davidson", gia: 110 },
+]
+courses.forEach(function (course, index) {
+    console.log(index, 'Khóa học: ' + course.name + ' do giáo viên ' + course.teacher + ' dạy, và nó có giá ' + course.gia)
+})
+//*----------------------------------------------------
+//  *  Array  every : Thường dùng kiểm tra tất cả phần tử phải hợp lệ điều kiện trong mảng
+var courses = [
+    { name: "HTML/CSS", teacher: "Mr John Doe", gia: 0 },
+    { name: "JavaScript", teacher: "Ms Jane Smith", gia: 0 },
+    { name: "Python Programming", teacher: "Dr Bob Davidson", gia: 0 },
+]
+var isFree = courses.every(function (course, index) {
+    return course.gia === 0 //?-----> Thay thế giá trị để tìm giá trị đúng
+})
 
+console.log('Khóa học này có miễn phí không: ' + isFree)
+//*----------------------------------------------------
+//  *  Array  some : Thường dùng kiểm tra chỉ cần đúng 1 điều kiện thì sẽ dừng lại kết quả đúng
+var courses = [
+    { name: "HTML/CSS", teacher: "Mr John Doe", gia: 220 },
+    { name: "JavaScript", teacher: "Ms Jane Smith", gia: 0 },
+    { name: "Python Programming", teacher: "Dr Bob Davidson", gia: 110 },
+]
+var isFree = courses.some(function (course) {
+    return course.gia === 0
+})
+console.log(isFree)
 
+//*----------------------------------------------------
+//  *  Array find : Thường dùng tìm kiếm chỉ 1 phần tử trong mảng, VD(Tìm số điện thoại trong danh bạ)
+var courses = [
+    { name: "HTML/CSS", teacher: "Mr John Doe", gia: 220 },
+    { name: "JavaScript", teacher: "Ms Jane Smith", gia: 0 },
+    { name: "Python Programming", teacher: "Dr Bob Davidson", gia: 110 },
+]
+var tìmKiem = courses.find(function (course) {
+    return course.name === 'JavaScript'
+})
+console.log(tìmKiem)
 
-
-
-
-
-
-
-
-
-
-
-
-
+//*----------------------------------------------------
+//  *  Array filter? : Tìm tất cả phần tử hợp lệ trong mảng (VD: tìm giá khóa học giống nhau)
+var courses = [
+    { name: "HTML/CSS", teacher: "Mr John Doe", gia: 220 },
+    { name: "JavaScript", teacher: "Ms Jane Smith", gia: 0 },
+    { name: "Python Programming", teacher: "Dr Bob Davidson", gia: 110 },
+    { name: "Java Programming", teacher: "Mrs Sarah Lee", gia: 0 },
+    { name: ".NET Framework", teacher: "Professor Kim Choi", gia: 0 },
+]
+var timKiem = courses.filter(function (courses) {
+    return courses.gia === 0
+})
+console.log('Filter: ' + timKiem)
+//*----------------------------------------------------
+//  *  Array map : 
+var courses = [
+    { name: "HTML/CSS", teacher: "Mr John Doe", gia: 220 },
+    { name: "JavaScript", teacher: "Ms Jane Smith", gia: 0 },
+    { name: "Python Programming", teacher: "Dr Bob Davidson", gia: 110 },
+    { name: "Java Programming", teacher: "Mrs Sarah Lee", gia: 0 },
+    { name: ".NET Framework", teacher: "Professor Kim Choi", gia: 0 },
+]
+/* Phần này sẽ thay thế toàn bộ phía trên */
+function courseHandler(khoaHoc) {
+    return {
+        ten: `${khoaHoc.name}`,
+        tenGiaoVien: `${khoaHoc.teacher}`,
+        diaChi: 'HCM city',
+        giaKhoaHoc: `Gia: ${khoaHoc.gia}`
+    }
+}
+var newCourses = courses.map/*--> Bên trong map phải là 1 function*/(courseHandler)/*--> Function đã khai báo phía trên*/
+console.log(newCourses)
