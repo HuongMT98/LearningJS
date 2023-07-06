@@ -165,11 +165,11 @@
 // *4 Replace ghi đè chuỗi
 // var a = 'Hoc JS tai F8'
 // console.log(a.replace('JS', 'Javascript'))
-// ? --> Thay thế JS thành Javascript
+////// ? --> Thay thế JS thành Javascript
 
 // var a = 'Hoc JS JS JS tai F8'
 // console.log(a.replace(/JS/g, 'Javascript'))
-// ? --> Thay thế toàn bộ JS thành Javascript
+////// ? --> Thay thế toàn bộ JS thành Javascript
 
 // *5 Convert uppercase thành chữ hoa
 // var a = 'Hoc JS JS JS tai F8'
@@ -258,7 +258,7 @@
 
 
 //! ------------------------
-//! Hàm : Funtion là một khối mã chức năng và không tự chạy đến khi được gọi
+//! Function : Function là một khối mã chức năng và không tự chạy đến khi được gọi
 // *1 Tạo hàm Funtion
 // function sayHello() {
 //     return 'hello world';
@@ -288,39 +288,275 @@
 // writeLof('Đây là tham số thứ 1', 'Đây là tham số thứ 2')
 
 
-// *3 Return trong Funtion
-// var isComfirm = confirm('Bạn đủ tuổi chưa?')
-// console.log(isComfirm)
+// *3 Return trong Function
+// function phepCong(a, b) {
+//     return a + b; // ---> Bên dưới hàm return sẽ bị bỏ qua và không có return thì nó sẽ trả về undefine
+// }
+// var ketQua = phepCong(2, 8)
+// console.log('Kết quả ' + ketQua)
+
+
+// *4 Các loại Function
+////// ? Declaration Function và có thể gọi trước khi định nghĩa
+// function showMessage() {
+//     console.log("Declaration Function!");
+// }
+// showMessage()
+
+////// ? Expression Funtion : gán 1 Function cho 1 biến
+// var showMessage2 = function () {
+//     console.log("Expression Funtion");
+// }
+// showMessage2();
+
+
+// ! Object (Đối tượng) trong JS: thường được sử dụng lưu trữ thông tin cho một đối tượng cụ thể
+// var thongTin = {
+//     ten: 'Thanh Hưởng',
+//     tuoi: '24',
+//     diaChi: 'Bình Thạnh, tp HCM'
+// }
+// thongTin.email = 'mthanhhuong85@gmail.com' //// //?---> thêm vào Object
+// console.log(thongTin)
+// console.log(thongTin.ten) //// //?---> cách 1 lấy thông tin Name trong Object
 
 // //✨✨✨✨✨✨✨✨✨✨✨
-// function phepCong(a, b) {
-//     return a + b; // ---> Bên dưới hàm return sẽ bị bỏ qua
+// var emailKey = 'email'
+// var hocSinh = {
+//     tenHocSinh: 'Phong',
+//     tuoi: '16',
+//     [emailKey]: 'asdasd@gmail.com',
+// };
+// console.log(hocSinh)
+// delete hocSinh.tuoi; //// //?---> Xóa 1 phần tử trong Object
+// console.log(hocSinh)
+
+
+// ! Object constructor : Xây dựng đối tượng
+// ?----->Nên nhớ Object contructor thì nên viết hoa ký tự đầu tiên, vd : NguoiDung
+
+// function User(firstName, lastName, avatar) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.avatar = avatar;
+
+//     this.getName = function () {
+//         return `${this.firstName} ${this.lastName}`;
+//     }
 // }
-// var result = phepCong(2, 8)
-// console.log(result)
+//// //?---> Tạo ra phương thức chung
+// var author = new User('Mai', 'Thanh Hưởng', 'Avatar');
+// var user = new User('Họ', 'Tên', 'Avatar');
+
+//// //?---> Thêm phương thức riêng
+// author.title = 'Chia sẻ tại F8'
+// user.comment = 'Xin chào'
+
+// console.log(author.getName())
+// console.log(user.getName())
+
+//////✨✨✨✨✨✨✨✨✨✨✨
+// function NguoiDung(firstName, lastName, age, position) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.age = age;
+//     this.position = position;
+
+//     this.tenDayDu = function () {
+//         return `${this.firstName} ${this.lastName}`
+//     }
+//     this.tuoiDiaChi = function () {
+//         return `${this.age} ${this.position}`
+//     }
+
+// }
+
+// NguoiDungDau = new NguoiDung('Thành', 'Nguyễn', ' 38', 'KG')
+// NguoiDungHai = new NguoiDung('Kiên', 'Trần', ' 43', 'AG')
+
+// console.log(NguoiDungDau.tenDayDu() + NguoiDungDau.tuoiDiaChi())
+// console.log(NguoiDungHai.tenDayDu() + NguoiDungHai.tuoiDiaChi())
 
 
+//  ! Object prototype: Nguyên mẫu để tạo 1 đối tượng và sử dụng .prototype bên ngoài Object contructor để thêm đối tượng
+// function NguoiDung(firstName, lastName, age, position) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.age = age;
+//     this.position = position;
+
+//     this.tenDayDu = function () {
+//         return `${this.firstName} ${this.lastName}`
+//     }
+//     this.tuoiDiaChi = function () {
+//         return `${this.age} ${this.position}`
+//     }
+
+// }
+
+// NguoiDung.prototype.diemSo = ' 7.5'
+// NguoiDung.prototype.className = function () {
+//     return this.diemSo;
+// }
+
+// NguoiDungDau = new NguoiDung('Thành', 'Nguyễn', ' 38', 'KG')
+// NguoiDungHai = new NguoiDung('Kiên', 'Trần', ' 43', 'AG')
+
+// console.log(NguoiDungDau.tenDayDu() + NguoiDungDau.tuoiDiaChi() + NguoiDungDau.diemSo)
+// console.log(NguoiDungHai.tenDayDu() + NguoiDungHai.tuoiDiaChi() + NguoiDungHai.className())
 
 
+// ! Đối tượng Date : Tạo ra hoặc xem thời gian
+// var date = new Date()
+
+// var day = date.getDate()
+// console.log('Hôm nay ngày: ' + day)
+
+// var month = date.getMonth() + 1; // ?---> Đối tượng getMonth chỉ hiển thị từ 0 -> 11 nên phải +1
+// console.log('Hôm nay tháng: ' + month)
+
+// var time = date.getHours()
+// console.log('Bây giờ là : ' + time + ' giờ')
+
+// var minute = date.getMinutes()
+// console.log('Bây giờ là : ' + minute + ' phút')
 
 
+// ! Ternary Operator Toán tử 3 ngôi
+// var course = {
+//     name: 'Javascript',
+//     coin: 250,
+// }
+
+// var result = course.coin > 0 ? `${course.coin} Coins` : 'Miễn phí'; //*-----> Toán tử 3 ngôi: điều kiện ? Nếu điều kiện đúng : điều kiện sai (? :)
+// console.log('Khóa học: ' + `${course.name}` + ' có giá: ' + `${course.coin} Coins`);
+
+// ! Vòng lặp for LOOP
+// ? 1 for   Lặp với điều kiện đúng
+// for (var i = 0; i <= 10; i++) {
+//* Code sẽ chạy số lần tương đương điều kiện i (i<=100)
+////todo Chú ý điều kiện nếu không vòng lặp sẽ vô hạn (i>0; ; true)
+//     console.log(i)
+// }
+//*----------------------------------------------------
+////todo Ứng dụng vòng lặp lấy phần tử từ mảng Array
+// var myArray = [
+//     'JS',
+//     'PHP',
+//     'Python',
+//     'Java',
+//     'Ruby',
+// ];
+// var arrayLength = myArray.length;
+
+// for (var i = 0; i < arrayLength; i++) {
+//     console.log(myArray[i]);
+// }
+
+//*----------------------------------------------------
+// var juice = [
+//     {
+//         name: "Pepsi", price: "6 $"
+//     },
+//     {
+//         name: "Coca", price: '7 $'
+//     },
+//     {
+//         name: "7Up", price: '5 $'
+//     },
+// ]
+// var juicesLength = juice.length;
+// for (var i = 0; i < 3; i++) {
+//     console.log('Bạn đã chọn: ' + juice[i].name + ' và có giá ' + juice[i].price);
+// }
+//*----------------------------------------------------
+// var traiCay = [
+//     { loai: 'Táo', gia: '35000 Vnd / 1kg' },
+//     { loai: 'Quýt', gia: '8000 Vnd / 1kg' },
+//     { loai: 'Dưa hấu', gia: '15000 Vnd / 1kg' }
+// ]
+
+// var traiCayLength = traiCay.length;
+// for (let i = 0; i < traiCayLength; i++) {
+//     console.log('Bạn chọn mua: ' + traiCay[i].loai + ' với giá ' + traiCay[i].gia);
+
+// }
+
+//*----------------------------------------------------
+// ? 2 For-in    Lặp qua key của tối tượng
+// var myInfo = {
+//     name: 'Thanh Hưởng',
+//     age: '25',
+//     address: 'Kiên Giang',
+// }
+// for (var thongTin in myInfo) {
+//     console.log(myInfo[thongTin]);
+// }
+
+//*----------------------------------------------------
+// ? 3 For-of    Lặp qua value của tối tượng
+// var languages = [
+//     "JavaScript",
+//     "Python",
+//     "Java",
+//     "Ruby",
+//     "Swift",
+// ]
+// for (var languages of languages) {
+//     console.log(languages)
+// }
+
+//*----------------------------------------------------
+// ? 4 While     Lặp khi điều kiện đúng
+// var i = 1;
+// while (i < 10) {
+//     i++;     //todo  ----> Nhớ đặt điều kiện nếu không sẽ treo máy
+//     console.log(i)
+// }
 
 
+// ? 5 Do-While   Lặp ít nhất 1 lần, sau đó lặp khi điều kiện đúng
+// var i = 0;
+// do {
+//     i++;    //todo  ----> Nhớ đặt điều kiện nếu không sẽ treo máy
+//     console.log(i)
+// } while (i < 10);
+//*----------------------------------------------------
+// var i = 0
+// var isSuccess = false;
+// do {
+//     i++;
+//     console.log('Nạp thẻ lần ' + i);
+//     if (false) {
+//         isSuccess = true;
+//     }
+// } while (!isSuccess && i <= 3);
 
+//*----------------------------------------------------
+// ? 4 Nested Loop Vòng lặp lồng nhau
+// var myArray = [
+//     ['Táo', 'Chuối'],
+//     ['Cam', 'Bưởi'],
+//     ['Quýt', 'Nho']
+// ]
+// for (let i = 0; i < myArray.length; i++) {
+//     for (let j = 0; j < myArray[i].length; j++) {
+//         console.log(myArray[i][j])
+//     }
+// }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+//*----------------------------------------------------
+// var hocSinh = [
+//     ["Huy", "Nam"],
+//     ["Anh", "Nu"],
+//     ["Thao", "Nam"],
+//     ["Minh", "Nam"],
+// ]
+// for (let i = 0; i < hocSinh.length; i++) {
+//     for (let j = 0; j < hocSinh[i].length; j++) {
+//         console.log('Tên học sinh: ' + hocSinh[i][j]);
+//     }
+// }
 
 
 
