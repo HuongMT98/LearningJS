@@ -627,10 +627,11 @@ var courses = [
     { name: "Java Programming", teacher: "Mrs Sarah Lee", gia: 0 },
     { name: ".NET Framework", teacher: "Professor Kim Choi", gia: 0 },
 ]
-var timKiem = courses.filter(function (courses) {
+var timKiem = courses.filter(function () {
     return courses.gia === 0
 })
-console.log('Filter: ' + timKiem)
+console.log('Array Filter: ' + timKiem)
+
 //*----------------------------------------------------
 //  *  Array map : 
 var courses = [
@@ -651,3 +652,15 @@ function courseHandler(khoaHoc) {
 }
 var newCourses = courses.map/*--> Bên trong map phải là 1 function*/(courseHandler)/*--> Function đã khai báo phía trên*/
 console.log(newCourses)
+
+
+//array methods?
+
+const myArray = [1, 2, 3, 4, 5];
+const filteredArray = myArray.filter((element) => {
+    return element % 2 === 0;
+});
+const mappedArray = filteredArray.map((element) => {
+    return element * 2;
+});
+console.log(filteredArray, mappedArray)
