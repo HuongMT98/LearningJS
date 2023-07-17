@@ -698,7 +698,7 @@
 //     { name: "Java Programming", teacher: "Mrs Sarah Lee", gia: 0 },
 //     { name: ".NET Framework", teacher: "Professor Kim Choi", gia: 0 },
 // ]
-/* Phần này sẽ thay thế toàn bộ phía trên */
+// /* Phần này sẽ thay thế toàn bộ phía trên */
 // function courseHandler(khoaHoc) {
 //     return {
 //         ten: `${khoaHoc.name}`,
