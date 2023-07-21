@@ -713,3 +713,80 @@
 //*----------------------------------------------------
 //  *  Array reduce? : Dùng để nhận 1 giá trị duy nhất trong phần tử từ array
 
+///==> tổng số tiền
+var khoaHocs = [
+    {
+        id: 1,
+        name: 'Javascript',
+        price: 100,
+    },
+    {
+        id: 2,
+        name: 'HTML',
+        price: 200,
+    },
+    {
+        id: 3,
+        name: 'CSS',
+        price: 500,
+    },
+    {
+        id: 4,
+        name: 'Boostrap',
+        price: 300,
+    },
+]
+
+// //!=====> Dùng vòng lặp (Không ưu tiên dùng)
+// //* Biến lưu trũ
+// let totalPrice = 0
+// //* Lặp qua các phần tử
+// for (let khoaHoc of khoaHocs) {
+//     //* Thực hiện việc lưu trữ
+//     totalPrice += khoaHoc.price;
+
+// };
+// //*In ra giá trị
+// document.write('Giá khóa học là: ' + totalPrice + ' xu')
+
+
+
+// //! ======> Dùng Array Reduce   (Ưu tiên dùng)
+// let totalPrice1 = khoaHocs.reduce(function (total, khoaHoc) {
+//     return total + khoaHoc.price
+// }, 0) //*Giá trị khởi tạo (initial value) nên có giá trị khởi tạo, trong trường hợp này là 0
+// document.write(totalPrice1)
+
+//*----------------------------------------------------
+//  ?   Bài tập Flat: làm phẳng mảng tử Depth Array
+// let depthArray = [1, 2, [3, 4], 5, 6, [7, 8]]
+
+// let mangPhang = depthArray.reduce(function (flatOutput /*=> Biến lưu trũ */, depthItems /*=> giá trị hiện tại Current Value */) {
+//     return flatOutput.concat(depthItems)//*--> Phương thức concat để hợp nhất hai hoặc nhiều mảng và trả về mảng mới
+// }, []) //=> Đưa vào giá trị khởi tạo là mảng rỗng để bỏ mảng lồng
+
+
+
+// document.write('Hợp nhất mảng: ' + mangPhang)
+
+
+
+
+// //! -------------------------------------------------------
+// //! Callback funtion Là hàm (function) và được truyền qua đối số khi gọi hàm khác ---> Nói ngắn gọn là gọi 1 function trong 1 function khác
+
+// let courses = [
+//     'html',
+//     'css',
+//     'java'
+// ]
+// courses.map(function (khoaHoc) {
+//     console.log(khoaHoc)
+// })
+
+
+
+
+
+// //! -------------------------------------------------------
+// //! HTML DOM : Dom là Document Object Model, tài liệu hiển thị dưới dạng đối tượng
