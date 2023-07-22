@@ -7,7 +7,6 @@
 
 
 
-
 // //! =====================================================
 // //! =====================================================
 // //! =====================================================
@@ -845,7 +844,9 @@
 
 
 
-// //! ======================================================
+// //! =====================================================
+// //! =====================================================
+// //! =====================================================
 // //! Callback funtion Là hàm (function) và được truyền qua đối số khi gọi hàm khác ---> Nói ngắn gọn là gọi 1 function trong 1 function khác
 
 // let courses = [
@@ -862,11 +863,10 @@
 // //! =====================================================
 // //! =====================================================
 // //! =====================================================
-// //! HTML DOM : Dom là Document Object Model, tài liệu hiển thị dưới dạng đối tượng,
+// //! HTML DOM : Dom là Document Object Model, tài liệu hiển thị dưới dạng đối tượng
 /* //*DOM có 3 thành phần: Element(thẻ tag vd: <div></div>), Attribute(Thuộc tính vd: class, id) và Text.
 */
 // //? DOM Document Object trong Javascript: document là đại diện trang web
-
 // //! ------------------------------------------------
 // //* Phương thức lấy element trong DOM: id,class,tag name, css selector, html selector
 // //! ------------------------------------------------
@@ -889,4 +889,38 @@
 // let querySelectorAll = document.querySelectorAll('.headerclass')
 // console.log(querySelectorAll)
 
+
+
+
+// //! ------------------------------------------------
+// //* Phương thức lấy và thêm Attributes trong Dom: setAttribute và getAttribute
+// //! ------------------------------------------------
+// let headingElement = document.querySelector('h1')
+// //* ****************************** *//
+// headingElement.setAttribute('class', 'heading')/*Thêm class heading vào element */
+// //* ****************************** *//
+// headingElement.getAttribute('class')/*lấy class heading vào element */
+
+
+
+
+// //! ------------------------------------------------
+/* //* InnerText vs textContent Property
+   //* Khác nhau giữa innerText là textContent là:innerText chỉ lấy nội dung còn textContent sẽ lấy cả textNode (cả khoảng trắng, CSS)
+*/
+// //! ------------------------------------------------
+// let headingElement = document.querySelector('.headerclass')
+
+
+// console.log(headingElement.innerText)/*Lấy nội dung từ class:'headingElement' là 'Học JavaScript'*/
+// console.log(headingElement.textContent)/*Lấy nội dung từ class:'headingElement' là 'Học JavaScript'*/
+
+// headingElement.innerText = 'Nội dung mới' /* Thay text 'Học JavaScript' thành 'Nội dung mới'*/
+
+
+
+
+// //! ------------------------------------------------
+/* //* innerHTML Property
+*/
 // //! ------------------------------------------------
