@@ -714,28 +714,28 @@
 //  *  Array reduce? : Dùng để nhận 1 giá trị duy nhất trong phần tử từ array
 
 ///==> tổng số tiền
-var khoaHocs = [
-    {
-        id: 1,
-        name: 'Javascript',
-        price: 100,
-    },
-    {
-        id: 2,
-        name: 'HTML',
-        price: 200,
-    },
-    {
-        id: 3,
-        name: 'CSS',
-        price: 500,
-    },
-    {
-        id: 4,
-        name: 'Boostrap',
-        price: 300,
-    },
-]
+// var khoaHocs = [
+//     {
+//         id: 1,
+//         name: 'Javascript',
+//         price: 100,
+//     },
+//     {
+//         id: 2,
+//         name: 'HTML',
+//         price: 200,
+//     },
+//     {
+//         id: 3,
+//         name: 'CSS',
+//         price: 500,
+//     },
+//     {
+//         id: 4,
+//         name: 'Boostrap',
+//         price: 300,
+//     },
+// ]
 
 // //!=====> Dùng vòng lặp (Không ưu tiên dùng)
 // //* Biến lưu trũ
@@ -772,7 +772,7 @@ var khoaHocs = [
 
 
 
-// //! -------------------------------------------------------
+// //! ======================================================
 // //! Callback funtion Là hàm (function) và được truyền qua đối số khi gọi hàm khác ---> Nói ngắn gọn là gọi 1 function trong 1 function khác
 
 // let courses = [
@@ -786,7 +786,34 @@ var khoaHocs = [
 
 
 
+// //! =====================================================
+// //! =====================================================
+// //! =====================================================
+// //! HTML DOM : Dom là Document Object Model, tài liệu hiển thị dưới dạng đối tượng,
+/* //*DOM có 3 thành phần: Element(thẻ tag vd: <div></div>), Attribute(Thuộc tính vd: class, id) và Text.
+*/
+// //? DOM Document Object trong Javascript: document là đại diện trang web
 
+// //! ------------------------------------------------
+// //* Phương thức lấy element trong DOM: id,class,tag name, css selector, html selector
+// //! ------------------------------------------------
+// let headingNode = document.getElementById('heading')
+// console.log([headingNode])
 
-// //! -------------------------------------------------------
-// //! HTML DOM : Dom là Document Object Model, tài liệu hiển thị dưới dạng đối tượng
+// //* ****************************** *//
+// let headingNodes = document.getElementsByClassName('headerclass')
+// console.log([headingNodes])
+
+// //* ****************************** *//
+// let headingTagname = document.getElementsByTagName('h1')
+// console.log([headingTagname])
+
+// //* ****************************** *//
+// let querySelector = document.querySelector('.headerclass')
+// console.log(querySelector)
+
+// //* ****************************** *//
+// let querySelectorAll = document.querySelectorAll('.headerclass')
+// console.log(querySelectorAll)
+
+// //! ------------------------------------------------
