@@ -960,26 +960,42 @@
 // //! ------------------------------------------------
 // //* Add classList
 // //! ------------------------------------------------
-// const boxElement3 = document.querySelector('.add-classlist');
+const boxElement3 = document.querySelector('.add-classlist');
 
-// setInterval(() => {
-//    boxElement3.classList.add('red')
-// }, 2000); //*-->Sau 2 giây sẽ đổi thành màu đỏ vì thêm class red vào
+setInterval(() => {
+   boxElement3.classList.add('red')
+}, 2000); //*-->Sau 2 giây sẽ đổi thành màu đỏ vì thêm class red vào
+
+
 
 
 // //! ------------------------------------------------
 // //* Toggle classList
 // //! ------------------------------------------------
-// const boxElement4 = document.querySelector('.toggle-classlist');
+const boxElement4 = document.querySelector('.toggle-classlist');
 
-// setInterval(() => {
-//    boxElement4.classList.toggle('bgra')
-// }, 1000);//*-->Sau 1 giây background sẽ nhấp nháy liên tục vì đã thêm class background
+setInterval(() => {
+   boxElement4.classList.toggle('bgra')
+}, 1000);//*-->Sau 1 giây background sẽ nhấp nháy liên tục vì đã thêm class background
+
+
 
 
 // //! ------------------------------------------------
-// //* Remove classList
+// //* Remove classList and Add classList: Xóa và thêm Class List
 // //! ------------------------------------------------
+function clickRemove() {
+   const element = document.getElementById('remove-clList');
+   element.classList.remove('remove-classlist')
+   console.log(clickRemove.value)
+}
+
+function clickAdd() {
+   const element = document.getElementById('remove-clList');
+   element.classList.add('remove-classlist')
+   console.log(clickAdd.value)
+}
+
 
 
 
@@ -992,29 +1008,108 @@
 //* 1: Attribute Event
 //* 2: Assign Event Gán hành vi
 */
-
 // //! ------------------------------------------------
-// //* Attribute Event
-// //! ------------------------------------------------
-
-
-// //! ------------------------------------------------
-// //* Assign Event
+// //* Assign Event Gán hành vi người dùng
 // //! ------------------------------------------------
 const h1Element = document.getElementsByClassName('dom-event');
 
-// for (let i = 0; i < h1Element.length; i++) {
-//    h1Element[i].onclick = function (e) {
-//       console.log(e.target)
-//       e.target.classList.toggle('red')
-//    }
-// }  //*-----> Click vào từng sự kiện sẽ hiển thị đúng sự kiện h1 đó bằng vòng lặp và đổi màu khi click
-
-
-// //* ****************************** *//
 for (let i = 0; i < h1Element.length; i++) {
    h1Element[i].onclick = function (e) {
       console.log(e.target)
       e.target.classList.toggle('red')
    }
-} //*-----> Click vào từng sự kiện sẽ hiển thị đúng sự kiện h1 đó bằng vòng lặp và đổi màu khi click
+}  //*-----> Click vào từng sự kiện sẽ hiển thị đúng sự kiện h1 đó bằng vòng lặp và đổi màu khi click
+
+
+//* ****************************** *//
+for (let i = 0; i < h1Element.length; i++) {
+   h1Element[i].onclick = function (e) {
+      console.log(e.target)
+      e.target.classList.toggle('red')
+   }
+} //*-----> Click vào từng sự kiện sẽ hiển thị đúng sự kiện h1 đó bằng vòng lặp và đổi màu khi click và move on
+
+
+
+
+// //! ------------------------------------------------
+// //* DOM Event Input / Select
+// //! ------------------------------------------------
+
+let inputElement = document.querySelector('input[type="text"]')
+
+inputElement.oninput = function (e) {
+   inputElement = e.target.value
+   console.log(e.target.value)
+}
+// //*---------->Nhập giá trị và lưu
+
+// //* ****************************** *//
+let checkboxElement = document.querySelector('input[type="checkbox"]')
+
+checkboxElement.onchange = function (e) {
+   console.log(e.target.checked)
+}
+// //*---------->Kiểm tra checkbox true false
+
+// //* ****************************** *//
+let selectElement = document.querySelector('select')
+
+selectElement.onchange = function (e) {
+   console.log(e.target.value)
+}
+// //*---------->Kiểm tra select value
+
+
+
+
+// //! ------------------------------------------------
+// //* DOM Event Key up, Key down
+// //! ------------------------------------------------
+let keyUpElement = document.querySelector('input[type="text"]')
+document.onkeyup = function (e) {
+   console.log(e.target.value)
+}
+
+
+
+// //! ------------------------------------------------
+// //* DOM Event PreventDefault  Xóa hành vi mặc định của trình duyệt
+// //! ------------------------------------------------
+let aElement = document.links
+
+for (let i = 0; i < aElement.length; i++) {
+   aElement[i].onclick = function (e) {
+      console.log(e.target.href)
+   }
+}
+
+
+
+// //! ------------------------------------------------
+// //* StopPropagation Xóa sự kiện nổi bọt
+// //! ------------------------------------------------
+
+
+
+
+
+// //! ===================================================
+// //! ===================================================
+// //! ===================================================
+// //! Event listener: Lắng nghe sự kiện DOM thường dùng để làm nhiều sự kiện, lắng nghe và hủy bỏ lắng nghe. Ví dụ tạo comment xong bấm đồng ý rồi xóa event
+
+// //! ------------------------------------------------
+// //*
+// //! ------------------------------------------------
+
+let btn = document.getElementById('btn')
+
+function viec1() {
+   console.log('Việc 1')
+}
+btn.addEventListener('click', viec1)
+
+setTimeout(() => {
+   btn.removeEventListener('click', viec1)
+}, 2000); //===> Sau 2 giây sẽ không thể click được nữa
