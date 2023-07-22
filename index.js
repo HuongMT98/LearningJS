@@ -860,9 +860,9 @@
 
 
 
-// //! =====================================================
-// //! =====================================================
-// //! =====================================================
+// //! ===================================================
+// //! ===================================================
+// //! ===================================================
 // //! HTML DOM : Dom là Document Object Model, tài liệu hiển thị dưới dạng đối tượng
 /* //*DOM có 3 thành phần: Element(thẻ tag vd: <div></div>), Attribute(Thuộc tính vd: class, id) và Text.
 */
@@ -883,6 +883,7 @@
 
 // //* ****************************** *//
 // let querySelector = document.querySelector('.headerclass')
+
 // console.log(querySelector)
 
 // //* ****************************** *//
@@ -912,15 +913,108 @@
 // let headingElement = document.querySelector('.headerclass')
 
 
-// console.log(headingElement.innerText)/*Lấy nội dung từ class:'headingElement' là 'Học JavaScript'*/
-// console.log(headingElement.textContent)/*Lấy nội dung từ class:'headingElement' là 'Học JavaScript'*/
+// console.log(headingElement.innerText)  //!Lấy nội dung từ class:'headingElement' là 'Học JavaScript'*/
+// console.log(headingElement.textContent)   //!Lấy nội dung từ class:'headingElement' là 'Học JavaScript'*/
 
-// headingElement.innerText = 'Nội dung mới' /* Thay text 'Học JavaScript' thành 'Nội dung mới'*/
-
+// headingElement.innerText = 'Nội dung mới' //! Thay text 'Học JavaScript' thành 'Nội dung mới'
 
 
 
 // //! ------------------------------------------------
-/* //* innerHTML Property
+/* //* innerHTML Property và outerHTML
 */
 // //! ------------------------------------------------
+// let boxElement = document.querySelector('.box')
+// boxElement.innerHTML = '<h1>InnerHtml</h1>' /* Thêm element */
+// console.log(boxElement.innerHTML)
+
+// // //* ------------------------------------------------
+// let boxElement1 = document.querySelector('.box1')
+// boxElement1.outerHTML = '<h2>OuterHTML</h2>'
+// console.log(boxElement1.outerHTML)
+
+
+
+// //! ===================================================
+// //! ===================================================
+// //! ===================================================
+// //! DOM CSS: Thực tế không dùng
+// let boxElement2 = document.querySelector('.box1')
+
+// Object.assign(boxElement2.style, {
+//    with: '50px',
+//    height: "100px",
+//    backgroundColor: 'red',
+// })
+
+
+// //! ===================================================
+// //! ===================================================
+// //! ===================================================
+// //! DOM Event: ClassList property
+/*    //* 1:add: Thêm class elemnt,
+      //* 2:contains: Kiểm tra class,
+      //* 3:remove: Xóa class khỏi element,
+      //* 4:toggle: Có thì xóa class không thì thêm class, ứng dụng kiểu làm nút đóng mở menu
+*/
+// //! ------------------------------------------------
+// //* Add classList
+// //! ------------------------------------------------
+// const boxElement3 = document.querySelector('.add-classlist');
+
+// setInterval(() => {
+//    boxElement3.classList.add('red')
+// }, 2000); //*-->Sau 2 giây sẽ đổi thành màu đỏ vì thêm class red vào
+
+
+// //! ------------------------------------------------
+// //* Toggle classList
+// //! ------------------------------------------------
+// const boxElement4 = document.querySelector('.toggle-classlist');
+
+// setInterval(() => {
+//    boxElement4.classList.toggle('bgra')
+// }, 1000);//*-->Sau 1 giây background sẽ nhấp nháy liên tục vì đã thêm class background
+
+
+// //! ------------------------------------------------
+// //* Remove classList
+// //! ------------------------------------------------
+
+
+
+
+// //! ===================================================
+// //! ===================================================
+// //! ===================================================
+// //! DOM Event: Example
+/*
+//* 1: Attribute Event
+//* 2: Assign Event Gán hành vi
+*/
+
+// //! ------------------------------------------------
+// //* Attribute Event
+// //! ------------------------------------------------
+
+
+// //! ------------------------------------------------
+// //* Assign Event
+// //! ------------------------------------------------
+const h1Element = document.getElementsByClassName('dom-event');
+
+// for (let i = 0; i < h1Element.length; i++) {
+//    h1Element[i].onclick = function (e) {
+//       console.log(e.target)
+//       e.target.classList.toggle('red')
+//    }
+// }  //*-----> Click vào từng sự kiện sẽ hiển thị đúng sự kiện h1 đó bằng vòng lặp và đổi màu khi click
+
+
+// //* ****************************** *//
+for (let i = 0; i < h1Element.length; i++) {
+   h1Element[i].onclick = function (e) {
+      console.log(e.target)
+      e.target.classList.toggle('red')
+   }
+} //*-----> Click vào từng sự kiện sẽ hiển thị đúng sự kiện h1 đó bằng vòng lặp và đổi màu khi click
