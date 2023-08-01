@@ -1113,3 +1113,4 @@ btn.addEventListener('click', viec1)
 setTimeout(() => {
    btn.removeEventListener('click', viec1)
 }, 2000); //===> Sau 2 giây sẽ không thể click được nữa
+
