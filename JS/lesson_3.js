@@ -1,19 +1,19 @@
 ////❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️
 ////! CHUỖI TRONG JS
 ////✨✨✨✨✨✨✨✨
-////? 1: Tạo chuỗi
+////? 1: Tạo chuỗi  <--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--
 // let fullName = "Thanh Hưởng"
 // console.log(fullName)
 
-////? 2: Sử dụng dấu backslash \ trước dấu nháy
+////? 2: Sử dụng dấu backslash \ trước dấu nháy <--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--
 // let str = 'Thanh Hưởng là \'siêu nhân\''
 // console.log(str)
 
-////? 3: Xem độ dài chuỗi
+////? 3: Xem độ dài chuỗi   <--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--
 // let ten = 'Thanh Hưởng';
 // console.log(ten.length)
 
-////? 4: Template String Es6
+////? 4: Template String Es6    <--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--
 // let firstName = "Mai"
 // let lastName = "Thanh Hưởng"
 
@@ -23,7 +23,7 @@
 
 
 // ////✨✨✨✨✨✨✨✨
-// ////? Làm việc với chuỗi (String Method)
+// ////? Làm việc với chuỗi (String Method) <--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--
 // let stringDemo = " Đây là stringDemo Đây "
 
 // ////*1: Length: Độ dài
@@ -60,17 +60,17 @@
 ////❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️
 ////! SỐ TRONG JS
 ////✨✨✨✨✨✨✨✨
-// ////? 1: Tạo biến
+// ////? 1: Tạo biến    <--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--
 // let num1 = 10;
 // let pi = 3.14
 
-// ////? 2: Kiểm tra datatype
+// ////? 2: Kiểm tra datatype   <--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--
 // console.log(typeof num1)
 // console.log(typeof pi)
 
 
 // ////✨✨✨✨✨✨✨✨
-// ////? Làm việc với số trong js (Number Method JS)
+// ////? Làm việc với số trong js (Number Method JS)    <--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--
 // ////* To String: Biến số thành chuỗi
 // let numberDemo = 1000
 // console.log(numberDemo.toString())
@@ -83,7 +83,7 @@
 
 // ////❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️
 // ////! MẢNG TRONG JS
-// ////? 1: Tạo mảng
+// ////? 1: Tạo mảng    <--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--
 // let myArray = [
 //     'JS',
 //     'Rudy',
@@ -98,13 +98,13 @@
 
 
 ////💎💎💎💎💎💎💎💎💎💎💎💎💎💎
-// ////? 2: Truy xuất mảng
+// ////? 2: Truy xuất mảng  <--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--
 // console.log(myArray[1]);
 // console.log(myArray.length)
 
 
 ////💎💎💎💎💎💎💎💎💎💎💎💎💎💎
-////? 3: Làm việc với mảng
+////? 3: Làm việc với mảng  <--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--<--
 // var languages = [
 //     "JavaScript",
 //     "Python",
@@ -215,3 +215,44 @@
 
 
 // console.log(hocVien1.className)
+
+
+
+// ////❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️
+// ////! MATH OBJECT TRONG JS
+////*1: Math.pi
+// console.log(Math.PI)
+
+////*2: Math.round()                    --> Làm tròn số
+// console.log(Math.round(1.25))
+
+////*3: Math.abs()                      --> Giá trị tuyệt đối của 1 số
+// console.log(Math.abs(1.25))
+
+////*4: Math.ceil()                     --> Làm tròn trên
+// console.log(Math.ceil(4.00001)) // 5
+
+////*5: Math.flood()                    --> Làm tròn dưới
+// console.log(Math.floor(5.003))
+
+////*6: Math.random()                   --> Tạo dãy số ngẫu nhiên nhỏ hơn 1
+// console.log(Math.floor((Math.random() * 10))) ////! --> Ví dụ tạo ngẫu nhiên 1 số nhỏ hơn 10 kết hợp giữa .floor và .random
+
+
+// let random = Math.floor((Math.random() * 5))
+// let randomCoin = [
+//     '10 coin',
+//     '20 coin',
+//     '30 coin',
+//     '40 coin',
+//     '50 coin',
+// ]
+// console.log(randomCoin[random])
+// ////!--> Ví dụ tặng ngẫu nhiên 1 trong 5 phần thưởng trên cho người chơi
+
+
+////*7: Math.min()                      --> Lấy số nhỏ nhất
+// console.log(Math.min(-100, 50, 15, -15)) //-100
+
+////*8: Math.max                        --> Lấy số lớn nhất
+// console.log(Math.max(-100, 50, 15, -15)) //50
