@@ -123,17 +123,51 @@
 //  ⁡⁢⁣⁢7: Array reduce()⁡: ⁡⁣⁢⁣Dùng để trả về giá trị duy nhất⁡
 // let arr = [1, 2, 3, 4, 5];
 
-
-// //--> ⁡⁣⁢⁣Dùng hàm reduce() để tính tổng⁡
+//--> ⁡⁣⁢⁣Dùng hàm reduce() để tính tổng⁡
 // let sum = arr.reduce((x, y) => x + y);
-// console.log(sum);
+// console.log('⁡⁣⁢⁣Dùng hàm reduce() để tính tổng của mảng:' + sum);
 
 
 
-// //--> ⁡⁣⁢⁣Dùng vòng lặp để tìm tổng⁡
+//--> ⁡⁣⁢⁣Dùng vòng lặp để tìm tổng⁡
 // for (let i = 0; i < arr.length; i++) {
-//        var tong = 0
-//        tong = tong + arr[i]
-// } console.log(tong)
+//        var sum1 = 0
+//        sum1 += arr[i]
+// } console.log('⁣Dùng vòng lặp để tìm tổng: ' + sum1)
+
+
+// ⁡⁢⁢⁣Ví Dụ: Dùng phương thức reduce() và vòng lặp tính tổng⁡⁡
+// var totalCoin = [
+//        { coinName: "USDT", amount: 1000 },
+//        { coinName: "BTC", amount: 500 },
+//        { coinName: "ETH", amount: 200 },
+// ]
+
+//--> ⁡⁣⁢⁡⁢⁣⁢Dùng vòng lặp for of tính tổng⁡⁡⁡
+// var tongCoin = 0
+// for (const tong of totalCoin) {
+//        tongCoin += tong.amount
+// }
+// console.log('Dùng vòng lặp tính tongCoin: ' + tongCoin)
+
+
+
+//--> ⁡⁢⁣⁢Dùng phương thức reduce()⁡
+// var tongCoin1 = totalCoin.reduce((a, b) => a + b.amount, 0)
+// console.log('Phương thức reduce() tính tongCoin1: ' + tongCoin1)
+
+
+
+
+// ⁡⁢⁢⁡⁢⁢⁣Ví dụ: Dùng phương thức reduce() tính tổng tiền thưởng⁡
+// var sports = [
+//        { name: "Tennis", price: 80000 },
+//        { name: "Football", price: 60000 },
+//        { name: "Swimming", price: 90000 },
+// ]
+
+// let tongTienThuong = sports.reduce((a, b) => a + b.price, 0)
+// console.log(tongTienThuong)
+
 
 
