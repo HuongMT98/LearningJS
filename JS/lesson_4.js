@@ -1,8 +1,19 @@
-// ////❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️
+////!_______>>> Nội dung có trong bài này:
+////*       IF ELSE
+////*       SWITCH CASE
+////*       Toán tử 3 ngôi (Ternary operator)
+////*       VÒNG LẶP LOOP (for/       for-in /      for-of /      while /     do-while /      Vòng lặp lồng nhau)
+////🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧
+
+
+
+
+
+////🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩
 // ////! CÂU ĐIỀU KIỆN RẼ NHÁNH- TOÁN TỬ 3 NGÔI
 ////? Khi nào dùng if else: < > !==
 ////? Khi nào dùng switch case: Khi biết trước giá trị
-////✨✨✨✨✨✨✨✨
+////📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀
 ////! IF ELSE
 // var date = 2
 
@@ -25,7 +36,7 @@
 
 
 
-// ////✨✨✨✨✨✨✨✨
+////📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀
 // ////! SWITCH CASE
 // var thu = 8
 
@@ -57,7 +68,7 @@
 
 
 
-// ////✨✨✨✨✨✨✨✨
+////📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀📀
 // ////! Toán tử 3 ngôi (Ternary operator)
 // let course = {
 //     name: "Toán",
@@ -76,8 +87,7 @@
 
 
 
-
-// ////❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️
+////🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩
 // ////! VÒNG LẶP LOOP
 ////💎💎💎💎💎💎💎💎💎💎💎💎💎💎
 ////* 1: for : Lặp với điều kiện đúng
@@ -101,7 +111,7 @@
 // }
 
 
-////💎💎💎💎💎💎💎💎💎💎💎💎💎💎
+////♾️♾️♾️♾️♾️♾️♾️♾️♾️♾️♾️♾️♾️♾️♾️♾️♾️♾️♾️♾️♾️♾️♾️♾️♾️♾️♾️♾️♾️♾️♾️♾️♾️♾️♾️♾️♾️♾️♾️♾️♾️♾️
 ////* 2: for in: Lặp qua key của đối tượng
 //? Đề bài: VD1
 // let myInfo = {
@@ -158,7 +168,7 @@
 
 ////💎💎💎💎💎💎💎💎💎💎💎💎💎💎
 ////* 5: do while: :Lặp 1 lần, sau đó lặp khi điều kiện đúng
-//? Đề bài: VD in ra số lần nạp thẻ
+////? Đề bài: VD in ra số lần nạp thẻ
 // let j = 0
 // var isSuccess = false
 
@@ -166,10 +176,10 @@
 //     j++
 //     console.log('Nạp thẻ lần ' + j)
 
-//     //Thành công
+//     //*  Thành công
 //     if (true) {
 //         isSuccess = true;
-//      //Thất bại
+//      //* Thất bại
 //     } else {
 //         isSuccess = false
 //     }
@@ -178,7 +188,8 @@
 
 
 ////* 6: Break và Continue trong vòng lặp
-//? Đề bài: In ra số nguyên dương chia hết cho 3
+
+////?Đề bài: In ra số nguyên dương chia hết cho 3⁡⁡
 // for (let i = 0; i < 10; i++) {
 //     if (i % 3 !== 0) {
 //         continue;
@@ -197,8 +208,6 @@
 // for (let i = 0; i < myArray.length; i++) {
 //     for (let j = 0; j < myArray[i].length; j++) {
 //         console.log(myArray[i][j])
-
 //     }
-
 // }
 

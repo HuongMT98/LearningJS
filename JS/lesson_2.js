@@ -1,3 +1,20 @@
+////!_______>>> Nội dung có trong bài này:
+////*       KIỂU DỮ LIỆU BOOLEAN
+////*       CÂU LỆNH ĐIỀU KIỆN IF
+////*       TOÁN TỬ LOGICAL && ! ||
+////*       KIỂU DỮ LIỆU
+////*       HỌC VỀ HÀM FUNCTION
+////🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧
+
+
+
+
+
+
+
+
+
+
 ////❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️
 ////! KIỂU DỮ LIỆU BOOLEAN
 // let isSucces = true
@@ -111,7 +128,7 @@ Object  :Chứa dữ liệu
 
 
 ////❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️
-////! HỌC VỀ HÀM : Nó không tự thực thi và chỉ được thực hiện khi được gọi
+////! HỌC VỀ HÀM FUNCTION: Nó không tự thực thi và chỉ được thực hiện khi được gọi
 ////✨✨✨✨✨✨✨✨
 //*Tạo hàm:
 // var name = "Hưởng", age = 25, adress = "Kiên Giang";
