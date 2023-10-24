@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /*➖♦️♣️🐧♂️♌❄️✨💎♦️♥️🔔🎧💊
 ////🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧 Chia nội dung
 ////🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩 Chia Content trong nội dung
@@ -8,8 +14,15 @@
 * {
   margin: 0;
   padding: 0;
-  background: rgb(45, 46, 93);
+  box-sizing: border-box;
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    74deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
 }
+
 header {
   font-family: "Pixelify Sans", sans-serif;
 }
@@ -20,26 +33,18 @@ header {
   margin: auto;
   margin-top: 1rem;
   font-size: 3.5rem;
-  width: max-content;
   padding: 0 1rem;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  background: transparent;
 }
+
 h1 {
-  /*background: #121fcf;
-  background: linear-gradient(to right, #121fcf 0%, #e8efff 57%, #cf1512 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  */
-  color: #fff;
+  color: #ffffff9e;
   text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
     0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
   animation: pulsate 0.11s ease-in-out infinite alternate;
-  -webkit-animation: pulsate 0.11s ease-in-out infinite alternate;
+  -webkit-animation: pulsate 0.25s ease-in-out infinite alternate;
 }
+
 @keyframes pulsate {
   100% {
     /* Larger blur radius */
