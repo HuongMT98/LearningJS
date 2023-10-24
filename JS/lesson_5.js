@@ -1,11 +1,14 @@
 ////!_______>>> Nội dung có trong bài này:
 /*
        ⁡⁣⁣⁢⁡⁣⁢⁣Array Method(Phương thức làm việc với mảng):⁡
-       ⁡⁢⁣⁢⁡⁢⁣⁢1: forEach():⁡ ⁡⁢⁣⁡⁣⁣⁢lặp qua một mảng hoặc một đối tượng giống mảng⁡⁡
-       ⁡⁢⁣⁢2: every()⁡ : ⁡⁣⁢⁡⁢⁣⁡⁣⁣⁢Dùng kiểm tra tất cả phần tử thỏa mãn điều kiện⁡⁡⁡
-       ⁡⁢⁣⁢3: some() :⁡ ⁡⁣⁢⁡⁣⁣⁢Dùng kiểm tra điều kiện đúng chỉ duy nhất một phần tử⁡
-       ⁡⁢⁣⁢4: find()⁡ : ⁡⁣⁢⁣⁡⁣⁣⁢Dùng tìm kiếm⁡
-       ⁡⁢⁣⁢5: filter()⁡ : ⁡⁣⁢⁡⁣⁣⁢Dùng lọc ra các phần tử theo điều kiện⁡
+       ⁡⁢⁣⁢⁡⁢⁣⁢1: forEach():⁡ ⁡⁢⁣⁡⁣⁣⁢lặp qua một mảng hoặc một đối tượng giống mảng                      ⁡⁢⁢⁣dòng 82⁡⁡⁡
+       ⁡⁢⁣⁢2: every()⁡ : ⁡⁣⁢⁡⁢⁣⁡⁣⁣⁢Dùng kiểm tra tất cả phần tử thỏa mãn điều kiện                      ⁡⁢⁢⁣dòng 130⁡⁡⁡⁡
+       ⁡⁢⁣⁢3: some() :⁡ ⁡⁣⁢⁡⁣⁣⁢Dùng kiểm tra điều kiện đúng chỉ duy nhất một phần tử                 ⁡⁢⁢⁣dòng 171⁡⁡
+       ⁡⁢⁣⁢4: find()⁡ : ⁡⁣⁢⁣⁡⁣⁣⁢Dùng tìm kiếm                                                         ⁡⁢⁢⁣dòng 190⁡⁡
+       ⁡⁢⁣⁢5: filter()⁡ : ⁡⁣⁢⁡⁣⁣⁢Dùng lọc ra các phần tử theo điều kiện                              ⁡⁢⁢⁣dòng 231⁡
+       ⁡⁢⁣⁢6: map():⁡ ⁡⁣⁢⁣⁡⁣⁣⁢Dùng để thay đổi element trong Array                                    ⁡⁢⁢⁣dòng 326⁡⁡⁡
+       ⁡⁢⁣⁢7: reduce()⁡⁡: ⁡⁣⁢⁡⁣⁣⁢Dùng để trả về giá trị duy nhất                                      ⁡⁢⁢⁣dòng 406⁡
+       ⁡⁢⁣⁢8: includes()⁡: ⁡⁣⁣⁢Dùng để tìm một value trong mảng hoặc chuỗi⁡
 */
 //🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧
 
@@ -60,12 +63,14 @@ let index = fruits.indexOf('cherry');
 console.log(index); // ⁡⁣⁢⁣Kết quả: 2⁡
 
 ⁡⁢⁣⁢7. Đảo ngược mảng: Sử dụng phương thức reverse để đảo ngược thứ tự các phần tử trong mảng. Ví dụ:
-let fruits = [
+⁡⁣⁢⁣let fruits = [
        { name: "Apple", color: "red" },
        { name: "Banana", color: "yellow" },
 ]
 fruits.reverse();
-console.log(fruits)
+console.log(fruits)⁡
+
+
 */
 
 
@@ -76,7 +81,9 @@ console.log(fruits)
 ////🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩
 // ⁡⁢⁣⁢1: forEach()⁡
 /*⁡
-       ⁡⁣⁣⁢Vòng lặp foreach() trong JavaScript được sử dụng để lặp qua một mảng hoặc một đối tượng giống mảng.Nó tương tự như vòng lặp for, nhưng cú pháp của nó đơn giản hơn và nó có thể được sử dụng để lặp qua các đối tượng không có chỉ số.⁡
+       ⁡⁣⁣⁢Vòng lặp foreach() trong JavaScript được sử dụng để lặp qua một mảng hoặc một đối tượng giống mảng.
+       Nó tương tự như vòng lặp for, nhưng cú pháp của nó đơn giản hơn và nó có thể được sử dụng để lặp qua các
+       đối tượng không có chỉ số.⁡
               array.forEach(function (element, index, array) {
                      // Do something with the element
               });
@@ -122,7 +129,9 @@ console.log(fruits)
 ////🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩
 // ⁡⁢⁣⁢2: every()⁡ : ⁡⁣⁢⁣Dùng kiểm tra tất cả phần tử thỏa mãn điều kiện⁡
 /*
-      ⁡⁣⁣⁢ Để sử dụng phương thức `every()` trong JavaScript, bạn cần truyền vào một hàm để kiểm tra từng phần tử của mảng. Phương thức `every()` sẽ trả về `true` nếu tất cả các phần tử trong mảng đáp ứng điều kiện được xác định bởi hàm đó, và ngược lại sẽ trả về `false`.
+      ⁡⁣⁣⁢ Để sử dụng phương thức `every()` trong JavaScript, bạn cần truyền vào một hàm để kiểm tra từng phần tử
+       của mảng. Phương thức `every()` sẽ trả về `true` nếu tất cả các phần tử trong mảng đáp ứng điều kiện
+       được xác định bởi hàm đó, và ngược lại sẽ trả về `false`.
 
               let arrEvery = [1, 2, 3, 4, 5];
               let resultEvery = arrEvery.every(function (element) {
@@ -160,7 +169,9 @@ console.log(fruits)
 
 ////🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩
 // ⁡⁢⁣⁢3: some()⁡ : ⁡⁣⁢⁣Dùng kiểm tra điều kiện đúng chỉ duy nhất một phần tử⁡
-/*     ⁡⁢⁢⁡⁣⁣⁢Phương thức some() được sử dụng để kiểm tra xem có ít nhất một phần tử trong mảng thỏa mãn điều kiện được chỉ định bởi một hàm callback. Nếu có ít nhất một phần tử thỏa mãn điều kiện, phương thức some() sẽ trả về giá trị true, ngược lại sẽ trả về giá trị false.
+/*     ⁡⁢⁢⁡⁣⁣⁢Phương thức some() được sử dụng để kiểm tra xem có ít nhất một phần tử trong mảng thỏa mãn điều kiện
+       được chỉ định bởi một hàm callback. Nếu có ít nhất một phần tử thỏa mãn điều kiện, phương thức some()
+       sẽ trả về giá trị true, ngược lại sẽ trả về giá trị false.
        Cú pháp của phương thức some() như sau:⁡⁡
               array.some(function(element, index, array), thisArg);
 */
@@ -178,7 +189,9 @@ console.log(fruits)
 ////🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩
 // ⁡⁢⁣⁢4: find()⁡ : ⁡⁣⁢⁣Dùng tìm kiếm⁡
 /*
-       ⁡⁣⁣⁢Phương thức find() trong lập trình là một phương thức được sử dụng để tìm kiếm một chuỗi ký tự cụ thể trong một chuỗi khác. Phương thức này trả về chỉ số của ký tự đầu tiên của chuỗi con được tìm thấy, hoặc -1 nếu chuỗi con không được tìm thấy.⁡
+       ⁡⁣⁣⁢Phương thức find() trong lập trình là một phương thức được sử dụng để tìm kiếm một chuỗi ký tự
+       cụ thể trong một chuỗi khác. Phương thức này trả về chỉ số của ký tự đầu tiên của chuỗi con được tìm thấy,
+       hoặc -1 nếu chuỗi con không được tìm thấy.⁡
 
 
 
@@ -217,7 +230,8 @@ console.log(fruits)
 ////🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩
 // ⁡⁢⁣⁢5: filter()⁡ : ⁡⁣⁢⁣Dùng lọc ra các phần tử theo điều kiện⁡
 /*
-       ⁡⁣⁣⁢Phương thức filter() được sử dụng để lọc các phần tử của mảng thông qua một điều kiện nào đó. Phương thức này trả về một mảng mới chỉ chứa các phần tử thỏa mãn điều kiện đó.
+       ⁡⁣⁣⁢Phương thức filter() được sử dụng để lọc các phần tử của mảng thông qua một điều kiện nào đó.
+       Phương thức này trả về một mảng mới chỉ chứa các phần tử thỏa mãn điều kiện đó.
 
        Cú pháp của phương thức filter() như sau:⁡
              ⁡⁣⁢⁣ let newArray = array.filter(callback(element, index, array));⁡
@@ -524,7 +538,132 @@ console.log(fruits)
 // let depthArray = [
 //        1, 2, [3, 4], 5, 6, [7, 8, 9]
 // ]
-// let flatArray = depthArray.reduce((flatOutput, depthCurrent) => flatOutput.concat(depthCurrent), [])
+// let flatArray = depthArray.reduce((flatOutput, depthCurrent) => flatOutput.concat(depthCurrent), []) // 1 2 3 4 5 6 7 8 9
 
 
 
+//✖️✖️🔘🔘✖️✖️🔘🔘✖️✖️🔘🔘✖️✖️🔘🔘✖️✖️🔘🔘✖️✖️🔘🔘✖️✖️🔘🔘✖️✖️🔘🔘
+//     ⁡⁢⁢⁣Tìm phim của Nolan và tính điểm trung bình phim của Nolan⁡
+
+// var watchList = [
+//        {
+//               "Title": "Inception",
+//               "Year": "2010",
+//               "Rated": "PG-13",
+//               "Released": "16 Jul 2010",
+//               "Runtime": "148 min",
+//               "Genre": "Action, Adventure, Crime",
+//               "Director": "Christopher Nolan",
+//               "Writer": "Christopher Nolan",
+//               "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page, Tom Hardy",
+//               "Plot": "A thief, who steals corporate secrets through use of dream-sharing technology, is given the inverse task of planting an idea into the mind of a CEO.",
+//               "Language": "English, Japanese, French",
+//               "Country": "USA, UK",
+//               "imdbRating": "8.8",
+//               "imdbVotes": "1,446,708",
+//               "imdbID": "tt1375666",
+//               "Type": "movie",
+//        },
+//        {
+//               "Title": "Interstellar",
+//               "Year": "2014",
+//               "Rated": "PG-13",
+//               "Released": "07 Nov 2014",
+//               "Runtime": "169 min",
+//               "Genre": "Adventure, Drama, Sci-Fi",
+//               "Director": "Christopher Nolan",
+//               "Writer": "Jonathan Nolan, Christopher Nolan",
+//               "Actors": "Ellen Burstyn, Matthew McConaughey, Mackenzie Foy, John Lithgow",
+//               "Plot": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+//               "Language": "English",
+//               "Country": "USA, UK",
+//               "imdbRating": "8.6",
+//               "imdbVotes": "910,366",
+//               "imdbID": "tt0816692",
+//               "Type": "movie",
+//        },
+//        {
+//               "Title": "The Dark Knight",
+//               "Year": "2008",
+//               "Rated": "PG-13",
+//               "Released": "18 Jul 2008",
+//               "Runtime": "152 min",
+//               "Genre": "Action, Adventure, Crime",
+//               "Director": "Christopher Nolan",
+//               "Writer": "Jonathan Nolan (screenplay), Christopher Nolan (screenplay), Christopher Nolan (story), David S. Goyer (story), Bob Kane (characters)",
+//               "Actors": "Christian Bale, Heath Ledger, Aaron Eckhart, Michael Caine",
+//               "Plot": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, the caped crusader must come to terms with one of the greatest psychological tests of his ability to fight injustice.",
+//               "Language": "English, Mandarin",
+//               "Country": "USA, UK",
+//               "imdbRating": "9.0",
+//               "imdbVotes": "1,652,832",
+//               "imdbID": "tt0468569",
+//               "Type": "movie",
+//        },
+//        {
+//               "Title": "Batman Begins",
+//               "Year": "2005",
+//               "Rated": "PG-13",
+//               "Released": "15 Jun 2005",
+//               "Runtime": "140 min",
+//               "Genre": "Action, Adventure",
+//               "Director": "Christopher Nolan",
+//               "Writer": "Bob Kane (characters), David S. Goyer (story), Christopher Nolan (screenplay), David S. Goyer (screenplay)",
+//               "Actors": "Christian Bale, Michael Caine, Liam Neeson, Katie Holmes",
+//               "Plot": "After training with his mentor, Batman begins his fight to free crime-ridden Gotham City from the corruption that Scarecrow and the League of Shadows have cast upon it.",
+//               "Language": "English, Urdu, Mandarin",
+//               "Country": "USA, UK",
+//               "imdbRating": "8.3",
+//               "imdbVotes": "972,584",
+//               "imdbID": "tt0372784",
+//               "Type": "movie",
+//        },
+//        {
+//               "Title": "Avatar",
+//               "Year": "2009",
+//               "Rated": "PG-13",
+//               "Released": "18 Dec 2009",
+//               "Runtime": "162 min",
+//               "Genre": "Action, Adventure, Fantasy",
+//               "Director": "James Cameron",
+//               "Writer": "James Cameron",
+//               "Actors": "Sam Worthington, Zoe Saldana, Sigourney Weaver, Stephen Lang",
+//               "Plot": "A paraplegic marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
+//               "Language": "English, Spanish",
+//               "Country": "USA, UK",
+//               "imdbRating": "7.9",
+//               "imdbVotes": "876,575",
+//               "imdbID": "tt0499549",
+//               "Type": "movie",
+//        }
+// ];
+
+// function calculateRating(watchList) {
+//        let nolanFilms = watchList.filter(function (value) {
+//               return value.Director === "Christopher Nolan";
+//        })
+//        return nolanFilms.reduce(function (a, b) {
+//               return (a + parseFloat(b.imdbRating) / 4);
+//        }, 0)
+// }
+
+// console.log(calculateRating(watchList)); // Output: 8.675
+
+
+
+
+// ////🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩
+//  ⁡⁢⁡⁢⁣⁢8: Includes⁡
+/*
+       ⁡⁣⁣⁢Trong JavaScript, toán tử includes() kiểm tra xem một chuỗi có chứa một chuỗi con hay không.
+       Nó trả về true nếu chuỗi con được tìm thấy trong chuỗi, nếu không trả về false.⁡
+*/
+
+//     ⁡⁢⁢⁣Ví dụ: tìm react trong mảng⁡
+
+// let khoaHoc = [
+//        'javascript',
+//        'react',
+//        'nodejs',
+// ]
+// console.log(khoaHoc.includes('react'))
