@@ -6,9 +6,9 @@
        ⁡⁢⁣⁢3: some() :⁡ ⁡⁣⁢⁡⁣⁣⁢Dùng kiểm tra điều kiện đúng chỉ duy nhất một phần tử                 ⁡⁢⁢⁣dòng 171⁡⁡
        ⁡⁢⁣⁢4: find()⁡ : ⁡⁣⁢⁣⁡⁣⁣⁢Dùng tìm kiếm                                                         ⁡⁢⁢⁣dòng 190⁡⁡
        ⁡⁢⁣⁢5: filter()⁡ : ⁡⁣⁢⁡⁣⁣⁢Dùng lọc ra các phần tử theo điều kiện                              ⁡⁢⁢⁣dòng 231⁡
-       ⁡⁢⁣⁢6: map():⁡ ⁡⁣⁢⁣⁡⁣⁣⁢Dùng để thay đổi element trong Array                                    ⁡⁢⁢⁣dòng 326⁡⁡⁡
-       ⁡⁢⁣⁢7: reduce()⁡⁡: ⁡⁣⁢⁡⁣⁣⁢Dùng để trả về giá trị duy nhất                                      ⁡⁢⁢⁣dòng 406⁡
-       ⁡⁢⁣⁢8: includes()⁡: ⁡⁣⁣⁢Dùng để tìm một value trong mảng hoặc chuỗi⁡
+       ⁡⁢⁣⁢6: map():⁡ ⁡⁣⁢⁣⁡⁣⁣⁢Dùng để thay đổi element trong Array                                    ⁡⁢⁢⁣dòng ⁡⁢⁢⁣329⁡
+       ⁡⁢⁣⁢7: reduce()⁡⁡: ⁡⁣⁢⁡⁣⁣⁢Dùng để trả về giá trị duy nhất                                      ⁡⁢⁢⁣dòng ⁡⁢⁢⁣409⁡
+       ⁡⁢⁣⁢8: includes()⁡: ⁡⁣⁣⁢Dùng để tìm một value trong mảng hoặc chuỗi                        ⁡⁢⁢⁣dòng ⁡⁢⁢⁣658⁡
 */
 //🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧
 
@@ -228,18 +228,18 @@ console.log(fruits)⁡
 
 
 ////🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩
-// ⁡⁢⁣⁢5: filter()⁡ : ⁡⁣⁢⁣Dùng lọc ra các phần tử theo điều kiện⁡
+// ⁡⁢⁣⁢5: filter()⁡ : ⁡⁣⁢⁣Dùng lọc ra các phần tử theo điều kiện⁣⁡
 /*
        ⁡⁣⁣⁢Phương thức filter() được sử dụng để lọc các phần tử của mảng thông qua một điều kiện nào đó.
        Phương thức này trả về một mảng mới chỉ chứa các phần tử thỏa mãn điều kiện đó.
 
        Cú pháp của phương thức filter() như sau:⁡
-             ⁡⁣⁢⁣ let newArray = array.filter(callback(element, index, array));⁡
+             ⁡⁣⁢⁣ let newArray = array.⁡⁢⁢⁣filter⁡(⁡⁢⁣⁢function⁡(⁡⁣⁢⁢currentValue⁡, ⁡⁢⁢⁢index⁡, ⁡⁣⁣⁢arr⁡), ⁡⁢⁣⁣thisValue⁡)⁡
 
                            ⁡⁢⁣⁢ or⁡
 
               ⁡⁣⁢⁣let newArray = array.filter((element, index, array) => {
-                     // do something with element and/or index
+                     //     ⁡⁢⁣⁡⁢⁣⁢do something with element and/or index⁡⁡
               })⁡
 */
 //✖️✖️🔘🔘✖️✖️🔘🔘✖️✖️🔘🔘✖️✖️🔘🔘✖️✖️🔘🔘✖️✖️🔘🔘✖️✖️🔘🔘✖️✖️🔘🔘
@@ -251,10 +251,13 @@ console.log(fruits)⁡
 //        { name: "Hóa", grade: 76 },
 //        { name: "Anh Văn", grade: 82 },
 // ]
-// let diemCao = courses.find(function (course) {
-//        return course.grade >= 80
+// let diemGioi = courses.filter(function (diem) {
+//        if (diem.grade > 80) {
+//               console.log('Điểm cao vậy bạn: ' + diem.name)
+//        } else if (diem.grade < 80 && diem.grade >= 60) {
+//               console.log('Điểm ổn ha: ' + diem.name)
+//        }
 // })
-// console.log('Điểm cao trên 80: ' + diemCao.name + ' và có điểm số là: ' + diemCao.grade)
 
 
 //✖️✖️🔘🔘✖️✖️🔘🔘✖️✖️🔘🔘✖️✖️🔘🔘✖️✖️🔘🔘✖️✖️🔘🔘✖️✖️🔘🔘✖️✖️🔘🔘
@@ -637,7 +640,6 @@ console.log(fruits)⁡
 //               "Type": "movie",
 //        }
 // ];
-
 // function calculateRating(watchList) {
 //        let nolanFilms = watchList.filter(function (value) {
 //               return value.Director === "Christopher Nolan";
@@ -646,7 +648,6 @@ console.log(fruits)⁡
 //               return (a + parseFloat(b.imdbRating) / 4);
 //        }, 0)
 // }
-
 // console.log(calculateRating(watchList)); // Output: 8.675
 
 
@@ -667,3 +668,27 @@ console.log(fruits)⁡
 //        'nodejs',
 // ]
 // console.log(khoaHoc.includes('react'))
+
+
+//     ⁡⁢⁢⁣Ví dụ 1:⁡
+
+// let arrIncludes1 = [1, 2, 3, 4, 5];
+// console.log(arrIncludes1.includes(2)); // true
+// console.log(arrIncludes1.includes(6)); // false
+
+
+//     ⁡⁢⁢⁣Ví dụ 2:⁡
+
+// let arrIncludes2 = ['apple', 'banana', 'cherry'];
+// console.log(arrIncludes2.includes('banana')); // true
+// console.log(arrIncludes2.includes('grape')); // false
+
+
+//     ⁡⁢⁢⁣Ví dụ 3:⁡
+
+// let arrIncludes3 = [1, 2, 3, 4, 5];
+// console.log(arrIncludes3.includes(2, 2)); // ⁡⁣⁢⁣false vì không có số 2 ở index thứ 2 mà là số 3⁡
+// console.log(arrIncludes3.includes(2, 1)); // ⁡⁣⁢⁣true? vì có số 2 ở index thứ 1⁡
+
+
+//bài tập filter js?

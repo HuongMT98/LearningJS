@@ -1,11 +1,112 @@
 ////!_______>>> Nội dung có trong bài này
 /*
-    ⁡⁣⁣⁢CHUỖI TRONG JS
-    SỐ TRONG JS
-    OBJECT TRONG JS
-    MATH OBJECT TRONG JS⁡
+    ⁡⁢⁣⁢Chuỗi trong JS:⁡
+        ⁡⁢⁣⁣1: Tạo chuỗi⁡
+        ⁡⁢⁣⁣2: Sử dụng dấu backslash \ trước dấu nháy
+                let str = "Hello\nWorld";
+                console.log(str);⁡
+        ⁡⁢⁣⁣3: Xem độ dài chuỗi⁡             ⁡⁣⁣⁢(string.length)
+                let fruits = ['apple', 'banana', 'orange'];
+                let length = fruits.length; // length = 3
+                console.log(length);⁡
+        ⁡⁢⁣⁣4: Template String Es6⁡          ⁡⁣⁣⁢${tring}
+                let name = 'John';
+                let age = 30;
+                let result = `My name is ${name} and I am ${age} years old.`;
+                console.log(result);⁡
+
+    ⁡⁢⁣⁢Làm việc với chuỗi (String Method):⁡
+       ⁡⁢⁣⁣ 1: Length:⁡ ⁡⁣⁢⁣Làm việc với độ dài chuỗi
+        ⁡⁢⁣⁡⁢⁣⁣2: Find index:⁡ ⁡⁣⁢⁣Tìm chuỗi
+        ⁡⁢⁣⁡⁢⁣⁣3: Cut String:⁡ ⁡⁣⁢⁣Cắt chuỗi
+        ⁡⁡⁢⁣⁡⁢⁣⁣4: Replace String:⁡ ⁡⁣⁢⁣Thay chuỗi
+        ⁡⁢⁣⁣5: Convert to upper case:⁡⁣ ⁡⁣⁢⁣Làm chuỗi thành chữ hoa⁡
+        ⁡⁢⁣⁣6: Convert to lower case:⁡ ⁡⁣⁢⁣Làm chuỗi thành chữ ⁡⁣⁢⁣thường
+        ⁡⁢⁣⁣7: Trim:⁡ ⁡⁣⁢⁣Loại bỏ ký tự thừa ⁡⁣⁣⁢(Khoảng trống)
+        ⁡⁢⁣⁡⁢⁣⁣8: Split:⁡ ⁡⁣⁢⁣Cắt một chuỗi thành array ⁡⁣⁣⁢(Mảng)
+        ⁡⁢⁣⁣9 Get string index:⁡ ⁡⁣⁢⁣Lấy ký tự từ index
+
+    ⁡⁢⁣⁢Số trong JS⁡
+        ⁡⁢⁣⁢⁡⁢⁣⁣1: Tạo biến⁡
+        ⁡⁢⁣⁣2: Kiểm tra datatype⁡ ⁡⁣⁣⁢(typeof)⁡
+        ⁡⁢⁣⁣3: Làm việc với số trong js⁡ ⁡⁣⁣⁢(Number Method JS)
+
+
+    ⁡⁢⁣⁢Mảng trong JS⁡
+        ⁡⁢⁣⁣1: Tạo mảng
+        2: Truy xuất mảng
+        3: Làm việc với mảng:⁡
+             -->   ⁡⁢⁣⁢Array.forEach()⁡ - ⁡⁣⁢⁣lặp qua từng phần tử trong mảng và thực hiện một hàm đã cho trên mỗi phần tử.⁡
+             -->   ⁡⁢⁣⁢Array.map()⁡ - ⁡⁣⁢⁣tạo một mảng mới bằng cách áp dụng một hàm đã cho cho mỗi phần tử trong mảng gốc.⁡
+             -->   ⁡⁢⁣⁢Array.filter()⁡ - ⁡⁣⁢⁣tạo một mảng mới bằng cách lọc các phần tử trong mảng gốc theo một hàm đã cho.⁡
+             -->   ⁡⁢⁣⁢Array.reduce()⁡ - ⁡⁣⁢⁣giảm mảng thành một giá trị duy nhất bằng cách áp dụng một hàm đã cho cho từng cặp phần tử liên tiếp trong mảng.⁡
+             -->   ⁡⁢⁣⁢Array.some()⁡ - ⁡⁣⁢⁣kiểm tra xem có bất kỳ phần tử nào trong mảng thỏa mãn một hàm đã cho.⁡
+             -->   ⁡⁢⁣⁢Array.every()⁡ - ⁡⁣⁢⁣kiểm tra xem tất cả các phần tử trong mảng thỏa mãn một hàm đã cho.⁡
+             -->   ⁡⁢⁣⁢Array.indexOf()⁡ - ⁡⁣⁢⁣trả về chỉ mục của phần tử đầu tiên trong mảng thỏa mãn một hàm đã cho.⁡
+             -->   ⁡⁢⁣⁢Array.lastIndexOf()⁡ - ⁡⁣⁢⁣trả về chỉ mục của phần tử cuối cùng trong mảng thỏa mãn một hàm đã cho.⁡
+             -->   ⁡⁢⁣⁢Array.push()⁡ - ⁡⁣⁢⁣thêm một hoặc nhiều phần tử vào cuối mảng.⁡
+             -->   ⁡⁢⁣⁢Array.pop()⁡ - ⁡⁣⁢⁣xóa và trả về phần tử cuối cùng trong mảng.⁡
+             -->   ⁡⁢⁣⁢Array.shift()⁡ - ⁡⁣⁢⁣xóa và trả về phần tử đầu tiên trong mảng.⁡
+             -->   ⁡⁢⁣⁢Array.unshift()⁡ - ⁡⁣⁢⁣thêm một hoặc nhiều phần tử vào đầu mảng.⁡
+             -->   ⁡⁢⁣⁢Array.slice()⁡ - ⁡⁣⁢⁣trả về một mảng mới chứa các phần tử từ một chỉ mục bắt đầu đến một chỉ mục kết thúc đã cho.⁡
+             -->   ⁡⁢⁣⁢Array.splice()⁡ - ⁡⁣⁢⁣xóa các phần tử khỏi mảng tại một chỉ mục bắt đầu đã cho và thay thế chúng bằng các phần tử mới.⁡
+             -->   ⁡⁢⁣⁢Array.concat()⁡ - ⁡⁣⁢⁣nối hai hoặc nhiều mảng thành một mảng mới.⁡
+             -->   ⁡⁢⁣⁢Array.join()⁡ - ⁡⁣⁢⁣nối các phần tử của mảng thành một chuỗi.⁡
+             -->   ⁡⁢⁣⁢Array.reverse()⁡ - ⁡⁣⁢⁣đảo ngược thứ tự các phần tử trong mảng.
+
+
+
+    ⁡⁢⁣⁢Object Trong JS:
+    ⁡    ⁡⁢⁣⁣1: Tạo đối tượng⁡
+        ⁡⁢⁣⁣2: Xây dựng đối tượng Object Contructor⁡ ( ⁡⁣⁣⁡⁣⁢⁣Object Constructor trong JavaScript là một hàm đặc biệt được sử dụng để tạo và khởi tạo các đối tượng. Nó là một hàm có thể được gọi bằng từ khóa `new` theo sau là tên của hàm tạo và danh sách các đối số. Khi một đối tượng được tạo bằng cách sử dụng một hàm tạo đối tượng, hàm tạo sẽ được gọi và các đối số được truyền cho nó. Hàm tạo có thể sử dụng các đối số này để khởi tạo các thuộc tính của đối tượng.⁡ ⁡)
+
+                        function Person(name, age) {
+                        this.name = name;
+                        this.age = age;
+                        }
+                        const person1 = new Person("John", 30);
+                        const person2 = new Person("Jane", 25);
+                        console.log(person1.name); // "John"
+                        console.log(person2.age); // 25
+
+        ⁡⁢⁣⁣3: Object prototype:⁡⁡ ⁡⁣⁢⁣Nguyên mẫu tạo đối tượng dùng để tạo thêm thuộc tính bên ngoài 1 function
+
+
+    ⁡⁢⁣⁢Tính toán trong JS⁡
+        ⁡⁢⁣⁣1: Math.pi:⁡             ⁡⁣⁢⁣Tính số pi
+                let circumference = 2 * Math.pi * 5; // circumference = 31.41592653589793
+                console.log(circumference);⁡
+        ⁡⁢⁣⁣2: Math.round():⁡        ⁡⁣⁢⁣Làm tròn số
+                let number = 3.5;
+                let roundNumber = Math.round(number); // roundNumber = 4
+                console.log(roundNumber);⁡
+        ⁡⁢⁣⁣3: Math.abs() :⁡         ⁡⁣⁢⁣Giá trị tuyệt đối của 1 số
+                ⁡let number = -3;
+                let absNumber = Math.abs(number); // absNumber = 3
+                console.log(absNumber);
+        ⁡⁢⁣⁣4: Math.ceil():⁡         ⁡⁣⁢⁣Làm tròn trên
+                ⁡let number = 3.5;
+                let ceilNumber = Math.ceil(number); // ceilNumber = 4
+                console.log(ceilNumber);
+        ⁡⁢⁣⁣5: Math.floor():⁡        ⁡⁣⁢⁣Làm tròn dưới
+                let number = 3.5;
+                let floorNumber = Math.floor(number); // floorNumber = 3
+                console.log(floorNumber);⁡
+        ⁡⁢⁣⁣6: Math.random():⁡       ⁡⁣⁢⁣Tạo dãy số ngẫu nhiên nhỏ hơn 1
+                let randomNumber = Math.round(Math.random() * 10); // 0 <= randomNumber < 10
+                console.log(randomNumber);⁡
+        ⁡⁢⁣⁣7: Math.min() : ⁡        ⁡⁣⁢⁣Lấy số nhỏ nhất
+                let numbers = [3, 5, 1, 7, 2];
+                let min = Math.min(...numbers); // min = 1
+                console.log(min);⁡
+        ⁡⁢⁣⁣8: Math.max   :⁡         ⁡⁣⁢⁣Lấy số lớn nhất
+                let numbers = [3, 5, 1, 7, 2];
+                let max = Math.max(...numbers); // max = 7
+                console.log(max);⁡
+
 */
 ////🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧
+
 
 
 
@@ -127,58 +228,45 @@
 
 ////🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩
 //  ⁡⁢⁣⁢3: Làm việc với mảng⁡
-/*
-⁡⁣⁣⁢To string: chuyễn array sang chuỗi
-Join: gộp các phần tử của mảng thành 1 chuỗi
-Pop: xóa phần tử cuối mảng và trả về phần tử đã xóa
-Push: thêm vào mảng một vài phần tử
-Shift: Xóa phần tử đầu mảng và trả về
-Unshift: Thêm phần tử vào đầu mảng
-Concat: Nối mảng
-Slicing: Cắt một hoặc toàn bộ element⁡
-*/
-
-
-
 
 // var languages = [
 //     "JavaScript",
 //     "Python",
 //     "Java"
 // ]
-// ⁡⁢⁣⁢To string⁡: ⁡⁣⁢⁣chuyễn array sang chuỗi⁡
+//// ⁡⁢⁣⁢To string⁡: ⁡⁣⁢⁣chuyễn array sang chuỗi⁡
 // console.log(languages.toString())
 
 
 
-// ⁡⁢⁣⁢Join:⁡ ⁡⁣⁢⁣gộp các phần tử của mảng thành 1 chuỗi⁡
+//// ⁡⁢⁣⁢Join:⁡ ⁡⁣⁢⁣gộp các phần tử của mảng thành 1 chuỗi⁡
 // console.log(languages.join(" - "))
 
 
 
-// ⁡⁢⁣⁢Pop⁡: ⁡⁣⁢⁣xóa phần tử cuối mảng và trả về phần tử đã xóa⁡
+//// ⁡⁢⁣⁢Pop⁡: ⁡⁣⁢⁣xóa phần tử cuối mảng và trả về phần tử đã xóa⁡
 // console.log(languages.pop());
 
 
 
-// ⁡⁢⁣⁢Push⁡: ⁡⁣⁢⁣thêm vào mảng một vài phần tử⁡
+//// ⁡⁢⁣⁢Push⁡: ⁡⁣⁢⁣thêm vào mảng một vài phần tử⁡
 // console.log(languages.push('Dart', 'C#'))
 // console.log(languages)
 
 
 
-// ⁡⁢⁣⁢Shift⁡: ⁡⁣⁢⁣Xóa phần tử đầu mảng và trả về⁡
+//// ⁡⁢⁣⁢Shift⁡: ⁡⁣⁢⁣Xóa phần tử đầu mảng và trả về⁡
 // console.log(languages.shift())
 
 
 
-// ⁡⁢⁣⁢Unshift⁡: ⁡⁣⁢⁣Thêm phần tử vào đầu mảng⁡
+//// ⁡⁢⁣⁢Unshift⁡: ⁡⁣⁢⁣Thêm phần tử vào đầu mảng⁡
 // console.log(languages.unshift('C++'))
 // console.log(languages)
 
 
 
-// ⁡⁢⁣⁢Splicing⁡: ⁡⁣⁢⁣Xóa phần tử vào mảng, chèn phần tử mới vào mảng⁡
+//// ⁡⁢⁣⁢Splicing⁡: ⁡⁣⁢⁣Xóa phần tử vào mảng, chèn phần tử mới vào mảng⁡
 // console.log(languages.splice(3));
 // //!--> Xóa mảng thứ 3
 // languages.splice(1, 0, 'Dart')
@@ -187,13 +275,13 @@ Slicing: Cắt một hoặc toàn bộ element⁡
 
 
 
-// ⁡⁢⁣⁢Concat⁡: ⁡⁣⁢⁣Nối mảng⁡
+//// ⁡⁢⁣⁢Concat⁡: ⁡⁣⁢⁣Nối mảng⁡
 // var languages1 = ['C#', 'C++']
 // console.log(languages.concat(languages1))
 
 
 
-// ⁡⁢⁣⁢Slicing⁡: ⁡⁣⁢⁣Cắt một hoặc toàn bộ element⁡
+//// ⁡⁢⁣⁢Slicing⁡: ⁡⁣⁢⁣Cắt một hoặc toàn bộ element⁡
 // console.log(languages.slice(1))
 
 
@@ -237,7 +325,7 @@ Slicing: Cắt một hoặc toàn bộ element⁡
 // console.log(tacGia)
 // console.log(hocVien)
 
-
+// Object Contructor là gì?
 
 ////🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩
 // ⁡⁢⁣⁢Object prototype?:⁡ ⁡⁣⁢⁣Nguyên mẫu tạo đối tượng dùng để tạo thêm thuộc tính bên ngoài 1 function⁡
@@ -266,14 +354,7 @@ Slicing: Cắt một hoặc toàn bộ element⁡
 ////🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧
 // ////! MATH OBJECT TRONG JS
 /*
-⁡⁣⁣⁢1: Math.pi
-2: Math.round(): Làm tròn số
-3: Math.abs() : Giá trị tuyệt đối của 1 số
-4: Math.ceil(): Làm tròn trên
-5: Math.flood(: Làm tròn dưới
-6: Math.random()   :Tạo dãy số ngẫu nhiên nhỏ hơn 1
-7: Math.min() : Lấy số nhỏ nhất
-8: Math.max   : Lấy số lớn nhất⁡
+⁡
 */
 
 

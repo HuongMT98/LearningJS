@@ -3,7 +3,8 @@
       ⁡⁣⁣⁢ IF ELSE
        SWITCH CASE
        Toán tử 3 ngôi (Ternary operator)
-       VÒNG LẶP LOOP (for/       for-in /      for-of /      while /     do-while /      Vòng lặp lồng nhau)⁡
+       VÒNG LẶP LOOP (for/       for-in /      for-of /      while /
+            do-while /      Vòng lặp lồng nhau)⁡
 */
 ////🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧
 
