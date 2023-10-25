@@ -4,27 +4,27 @@
 */
 //🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧🧧⁡
 
-//     ⁡⁢⁢⁣Ví dụ: Dùng callback để tạo bộ đếm từ 0 - 5⁡
+//     ⁡⁢⁢⁣Ví dụ: Dùng callback để tạo bộ đếm từ 1 - 5⁡
 
-// function countToFive(start, callback) {
+// function countToFive(start, goiLai) {
 //        if (start <= 5) {
-//               console.log(start);
-//               setTimeout(function () {
-//                      countToFive(start + 1, callback);
+//               console.log(start)
+//               setTimeout(() => {
+//                      countToFive(start + 1, goiLai)
 //               }, 1000);
 //        } else {
-//               callback();
+//               goiLai();
 //        }
 // }
 
-// countToFive(0, function () {
+// countToFive(1, (() => {
 //        console.log("Đếm xong.");
-// });
+// }));
 
 
 
 
-
+// phương thức soft?
 
 //     ⁡⁢⁢⁣Ví dụ 1:  tự tạo phương thức map2 hoạt động tương tự map⁡
 
@@ -67,7 +67,8 @@
 //               outPut.push(result)
 //        }
 //        return outPut
-// }
+// } //--> Tự tạo phương thức myMap hoạt động giống map
+
 // const numbers = [1, 2, 3];
 
 // console.log(numbers.myMap(function (number) {
@@ -77,6 +78,4 @@
 // console.log(numbers.myMap(function (number, index) {
 //        return number * index;
 // })) // Output: [0, 2, 6]
-
-
 
