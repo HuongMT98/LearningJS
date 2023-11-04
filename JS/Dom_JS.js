@@ -7,58 +7,50 @@
                         Text
 */
 
-let h2Node = document.getElementById('dom')
-
-
-let mangNumber = [
-    1, 2, 3, 5, 8, 7,
-]
-
-
-// const ${ 1: TênBiến } = ${ 2: TênMảngCha }.reduce((acc, cur) => {
-//     return [...acc, ...cur.${ 3: TênMảngCon }];
-// }, []);
 
 
 
+// 1: Element: id, class, tag, css selector, html colection
+
+
+let getClassName1 = document.getElementsByClassName('title')
+console.log(getClassName1)
+
+let getID1 = document.getElementById("dom")
+console.log(getID1)
+
+let getTagName1 = document.getElementsByTagName('h3')
+console.log(getTagName1)
+
+let cssSelector1 = document.querySelector('.title')
+console.log(cssSelector1)
+
+let cssSelector2 = document.querySelectorAll('class-test2')
+console.log(cssSelector2)
+
+console.log(document.forms)
+
+let listItemNodes = document.querySelector('.box1')
+console.log(listItemNodes.querySelectorAll('li'))
 
 
 
 
-let mangHaiChieu = [
-    {
-        topic: "ReactJS",
-        posts: [
-            { postID: "id1", title: "title1" },
-            { postID: "id2", title: "title2" },
-        ],
-        studentName: [
-            { studentID: "id1", name: "Thanh" },
-            { studentID: "id2", name: "Phong" },
-            { studentID: "id2", name: "Út" },
-            { studentID: "id2", name: "Thành" },
-        ],
-    },
-    {
-        topic: "Vue.js",
-        posts: [
-            { postID: "id3", title: "title3" },
-            { postID: "id4", title: "title4" },
-        ],
-        studentName: [
-            { studentID: "id1", name: "Trần" },
-            { studentID: "id2", name: "Tịnh" },
-            { studentID: "id2", name: "Hai" },
-            { studentID: "id2", name: "Ngữ" },
-        ],
-    },
-]
+
+// 2: DOM Atribute
+
+let h1Attribute = document.getElementsByClassName('dom-attribute')
+h1Attribute.title = 'heading'
+h1Attribute.id = 'heading'
+h1Attribute.className = 'heading'
+h1Attribute[0].setAttribute('style', 'color:red; font-size:48px;')
+console.log(h1Attribute)
 
 
-const flatMang = mangHaiChieu.reduce((acc, cur) => {
-    return [...acc, ...cur.posts, ...cur.studentName];
-}, []);
-console.log(flatMang)
 
 
+// 3: InnerHTML
+
+let headingInner = document.querySelector('.text-innerdom')
+headingInner.innerHTML = '<h1>New Heading</h1>'
 
