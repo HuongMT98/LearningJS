@@ -9,7 +9,7 @@
 
 
 
-
+////🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩
 // 1: Element: id, class, tag, css selector, html colection
 
 
@@ -36,7 +36,7 @@ console.log(listItemNodes.querySelectorAll('li'))
 
 
 
-
+////🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩
 // 2: DOM Atribute
 
 let h1Attribute = document.getElementsByClassName('dom-attribute')
@@ -48,9 +48,47 @@ console.log(h1Attribute)
 
 
 
-
+////🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩
 // 3: InnerHTML
 
 let headingInner = document.querySelector('.text-innerdom')
 headingInner.innerHTML = '<h1>New Heading</h1>'
 
+
+
+
+let button = document.getElementById('myButton');
+button.addEventListener('click', function () {
+    let anNut = document.querySelector('.changebutton');
+    anNut.textContent = 'Bạn đã ấn nút';
+});
+
+
+
+////🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩
+// 4: DOM CSS
+
+let boxElement = document.querySelector('.box')
+
+Object.assign(boxElement.style, {
+    width: '200px',
+    height: '200px',
+    backgroundColor: 'red'
+})
+
+
+
+
+////🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩🧩
+// 5: ClassList Property:     add,contains,remove,toggle
+
+let boxElement1 = document.querySelector('.classlisttest')
+
+
+// ADD: Thêm    classList.add
+boxElement.classList.add('red')
+
+
+setInterval(() => {
+    boxElement1.classList.toggle('red')
+}, 1000)
