@@ -3,9 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-/* body {
-  background: linear-gradient(to bottom right, #33ccff 0%, #ff99cc 100%);
-  background-repeat: no-repeat;
-  max-width: max-content;
-  height: 100vh;
-} */
+body {
+  background-color: #453b3b;
+}
