@@ -644,3 +644,15 @@
 
 //? ∅∅∅∅∅∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∅∅∅∅∅
 //? Ví dụ
+
+// function myFunction(params) {
+//     if (typeof params === 'function') {
+//         params('Hưởng')
+//     }
+// }
+
+
+// function myCallback(value) {
+//     console.log('Giá trị callBack là: ', value)
+// }
+// myFunction(myCallback)
