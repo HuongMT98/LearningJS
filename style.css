@@ -14,3 +14,10 @@ body {
 .color-blue {
   color: blue;
 }
+
+.ul-domre {
+  display: none;
+}
+input:focus ~ .ul-domre {
+  display: block;
+}

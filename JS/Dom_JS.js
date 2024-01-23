@@ -116,7 +116,7 @@ setInterval(() => {
 /**
         1: Attribute Events
         2: Assign Event
-        3: preventDefault
+        3: preventDefault   
         4: stopPropagation
 */
 //⚙️⚙️⚙️⚙️⚙️⚙️⚙️⚙️⚙️⚙️⚙️⚙️⚙️⚙️⚙️⚙️⚙️⚙️⚙️⚙️⚙️⚙️⚙️⚙️⚙️⚙️
@@ -189,4 +189,52 @@ inputEKeyUp.onkeyup = function (e) {
 
 
 
-//*             PreventDefault
+//*             PreventDefault Hành vi mặc định JS
+
+//? VD
+
+let preDefault = document.querySelectorAll('.test-a')
+for (let i = 0; i < preDefault.length; i++) {
+    preDefault[i].onlick = function (e) {
+        if (e.target.href.startsWith('https://www.youtube.com/')) {
+            e.preventDefault()
+        }
+    }
+
+}
+
+
+
+//? VD Click vào input lấy giá trị có sẳn
+
+let ulElement = document.querySelector('.ul-domre')
+
+ulElement.onmousedown = function (e) {
+    e.preventDefault()
+} //! --> Ngăn chặn hành vi mặc định trước khi nhất chuột lên
+
+ulElement.onclick = function (e) {
+    console.log(e.target.innerHTML)
+}   //! --> Tạo Dom event lấy giá trị của click
+
+
+
+
+
+//*             stopPropagation : Dừng sự kiện nổi bọt
+
+document.querySelector('.h1-burble-e').onclick = function () {
+    console.log('DIV')
+}
+
+
+document.querySelector('.button-burble-e').onclick = function (e) {
+    e.stopPropagation()
+    console.log('Click Me!')
+}
+
+
+
+
+
+
