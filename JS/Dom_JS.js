@@ -233,8 +233,3 @@ document.querySelector('.button-burble-e').onclick = function (e) {
     console.log('Click Me!')
 }
 
-
-
-
-
-

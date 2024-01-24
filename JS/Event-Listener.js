@@ -41,3 +41,9 @@ btn.addEventListener('click', viec2)
 setTimeout(() => {
     btn.removeEventListener('click', viec1)
 }, 3000);    //! --> Sau 3 giây không thể event-listener việc 1
+
+
+
+
+
+
