@@ -18,11 +18,73 @@
         <!-- place navbar here -->
     </header>
     <main>
+        <div class="DOM">
+            <!-- 1: Classlist -->
+            <div class="dom-event">
+                <button onclick="clickToggle()" class="button-a">Hiện ảnh gái</button>
+            </div>
+            <p class="list-girl"></p>
 
-        <h1 id="heading">Heading Text</h1>
-        <p id="heading-p"></p>
 
-        <div class="box"></div>
+
+
+            <!-- 2: Lấy giá trị người dùng -->
+            <div style="padding-top: 3rem">
+                <input type="text" style="margin: 1rem" class="input-user"><br>
+                <p class="inputp"></p><br>
+
+                <input type="checkbox" style="margin: 1rem;"><br>
+                <p class="checkp"></p><br>
+
+                <select>
+                    <option value="Javascript">Javascript</option>
+                    <option value="Java">Java</option>
+                    <option value="PHP">PHP</option>
+                </select>
+                <p class="selectp"></p>
+            </div>
+
+
+
+
+            <!-- 3: Ngăn chặn hành vi mặc định-->
+            <div class="prevent-default">
+                <a href="http://youtube.com" class="pre-youtube"">Youtube</a><br>
+            <a href=" https://www.google.com/" class="pre-google">Google</a><br>
+
+
+                <input type="text" placeholder="Tìm kiếm" class="input-pre">
+
+                <ul class="ul-pre">
+                    <li>Javascript</li>
+                    <li>Java</li>
+                    <li>Golang</li>
+                </ul>
+
+                <p class="p-pre"></p>
+
+            </div>
+
+
+
+            <!-- 4: Sự kiện nổi bọt -->
+            <div class="sknb">
+                DIV
+                <button class="btnsknb">Click Me!</button>
+                <p class="psknb"></p>
+            </div>
+        </div>
+
+        <!-- ***************************************************** -->
+
+        <div class="event-listener">
+            <button class="event-btn">Click Me!</button>
+            <p class="event-p"></p>
+        </div>
+
+
+
+
 
     </main>
     <footer>
@@ -34,6 +96,7 @@
     <script src="./Javascript/bai1.js"></script>
     <script src="./Javascript/bai2.js"></script>
     <script src="./Javascript/DOM.js"></script>
+    <script src="./Javascript/EventListener.js"></script>
 
 
     <!-- Bootstrap JavaScript Libraries -->
