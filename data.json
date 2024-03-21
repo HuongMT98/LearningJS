@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Huong",
+    "age": 18,
+    "address": "KG"
+  },
+  {
+    "name": "Nguyen",
+    "age": 19,
+    "address": "HN"
+  },
+  {
+    "name": "Hoang",
+    "age": 20,
+    "address": "VN"
+  }
+]
